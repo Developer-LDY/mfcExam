@@ -8,22 +8,23 @@
 // CgPrjDlg 대화 상자
 class CgPrjDlg : public CDialogEx
 {
-// 생성입니다.
+	// 생성입니다.
 public:
 	CgPrjDlg(CWnd* pParent = NULL);	// 표준 생성자입니다.
 
 	CDlgImage *m_pDlgImage;
+	CDlgImage *m_pDlgImgResult;
 
-// 대화 상자 데이터입니다.
+	// 대화 상자 데이터입니다.
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_GPRJ_DIALOG };
 #endif
 
-	protected:
+protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 지원입니다.
 
 
-// 구현입니다.
+														// 구현입니다.
 protected:
 	HICON m_hIcon;
 
@@ -34,8 +35,8 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnBnClickedBtnDlg();
 	afx_msg void OnDestroy();
 
 	void CallFunc(int n);
+	afx_msg void OnBnClickedBtnTest();
 };
